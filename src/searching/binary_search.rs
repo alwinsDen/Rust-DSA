@@ -1,5 +1,8 @@
-use std::cmp::Ordering;
-
+ use std::cmp::Ordering;
+// alwin explains
+// here the binary search covers both the cases where the array order could be sort() or reverse
+// ().sort()
+//  hence is_asc condition checks for it.
 pub fn binary_search<T: Ord>(item: &T, arr: &[T]) -> Option<usize> {
     let mut is_asc = true;
     if arr.len() > 1 {
